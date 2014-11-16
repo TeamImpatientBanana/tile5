@@ -46,15 +46,41 @@ main.on('click', 'up', function(e) {
   var wind = new UI.Window();
   
   var cell0 = new UI.Rect({
-      position: new Vector2(0, 24),
-      // static value
-      size: new Vector2(28, 28),
-      borderColor: 'black'
-    });
+    position: new Vector2(0, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var cell1 = new UI.Rect({
+    position: new Vector2(29, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var cell2 = new UI.Rect({
+    position: new Vector2(58, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var cell3 = new UI.Rect({
+    position: new Vector2(86, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var cell4 = new UI.Rect({
+    position: new Vector2(115, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
   
-  var grid = [cell0];
+  var grid = [cell0, cell1, cell2, cell3, cell4];
     
-  wind.add(grid[0]);
+  for (var i = 0; i < grid.length; i++) {
+    wind.add(grid[i]);
+  }
   wind.show();
 
   /*
