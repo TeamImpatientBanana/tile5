@@ -11,6 +11,13 @@ var Vector2 = require('vector2');
 var totalCoins = 10;
 var totalHealth = 17;
 
+var main = new UI.Card({
+  title: 'tile5',
+  icon: 'images/menu_icon.png',
+  subtitle: 'Press select',
+  body: 'to view the grid.'
+});
+main.show();
 
 /*main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
@@ -39,181 +46,191 @@ var size3 = 67;
 var size4 = 96;
 var size5 = 125;
 
+main.on('click', 'select', function(e) {
+  
+  // Create a dynamic window
+  wind = new UI.Window();
+  
+  // First Row
+  var cell0 = new UI.Rect({
+    position: new Vector2(0, size1),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell1 = new UI.Rect({
+    position: new Vector2(29, size1),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell2 = new UI.Rect({
+    position: new Vector2(58, size1),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell3 = new UI.Rect({
+    position: new Vector2(87, size1),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell4 = new UI.Rect({
+    position: new Vector2(116, size1),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  // Second Row
+  var cell5 = new UI.Rect({
+    position: new Vector2(0, size2),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell6 = new UI.Rect({
+    position: new Vector2(29, size2),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell7 = new UI.Rect({
+    position: new Vector2(58, size2),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell8 = new UI.Rect({
+    position: new Vector2(87, size2),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell9 = new UI.Rect({
+    position: new Vector2(116, size2),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  // Third Row
+  var cell10 = new UI.Rect({
+    position: new Vector2(0, size3),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell11 = new UI.Rect({
+    position: new Vector2(29, size3),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell12 = new UI.Rect({
+    position: new Vector2(58, size3),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell13 = new UI.Rect({
+    position: new Vector2(87, size3),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell14 = new UI.Rect({
+    position: new Vector2(116, size3),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  // Fourth Row
+  var cell15 = new UI.Rect({
+    position: new Vector2(0, size4),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell16 = new UI.Rect({
+    position: new Vector2(29, size4),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell17 = new UI.Rect({
+    position: new Vector2(58, size4),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell18 = new UI.Rect({
+    position: new Vector2(87, size4),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell19 = new UI.Rect({
+    position: new Vector2(116, size4),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  // Fourth Row
+  var cell20 = new UI.Rect({
+    position: new Vector2(0, size5),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell21 = new UI.Rect({
+    position: new Vector2(29, size5),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell22 = new UI.Rect({
+    position: new Vector2(58, size5),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell23 = new UI.Rect({
+    position: new Vector2(87, size5),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell24 = new UI.Rect({
+    position: new Vector2(116, size5),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, cell10, cell11, cell12, cell13, cell14, cell15, cell16, cell17, cell18, cell19, cell20, cell21, cell22, cell23, cell24];
+    
+  for (var i = 0; i < grid.length; i++) {
+    wind.add(grid[i]);
+  }
+  wind.show();
 
-// Create a dynamic window
-var wind = new UI.Window();
-
-// First Row
-var cell0 = new UI.Rect({
-  position: new Vector2(0, size1),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
+  /*
+  var wind = new UI.Window();
+  var textfield = new UI.Text({
+    position: new Vector2(0, 20),
+    size: new Vector2(144, 30),
+    font: 'gothic-24-bold',
+    text: 'Text Anywhere!',
+    textAlign: 'center'
+  });
+  wind.add(textfield);
+  wind.show();
+  */
 });
-var cell1 = new UI.Rect({
-  position: new Vector2(29, size1),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell2 = new UI.Rect({
-  position: new Vector2(58, size1),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell3 = new UI.Rect({
-  position: new Vector2(87, size1),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell4 = new UI.Rect({
-  position: new Vector2(116, size1),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-
-// Second Row
-var cell5 = new UI.Rect({
-  position: new Vector2(0, size2),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell6 = new UI.Rect({
-  position: new Vector2(29, size2),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell7 = new UI.Rect({
-  position: new Vector2(58, size2),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell8 = new UI.Rect({
-  position: new Vector2(87, size2),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell9 = new UI.Rect({
-  position: new Vector2(116, size2),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-
-// Third Row
-var cell10 = new UI.Rect({
-  position: new Vector2(0, size3),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell11 = new UI.Rect({
-  position: new Vector2(29, size3),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell12 = new UI.Rect({
-  position: new Vector2(58, size3),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell13 = new UI.Rect({
-  position: new Vector2(87, size3),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell14 = new UI.Rect({
-  position: new Vector2(116, size3),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-
-// Fourth Row
-var cell15 = new UI.Rect({
-  position: new Vector2(0, size4),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell16 = new UI.Rect({
-  position: new Vector2(29, size4),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell17 = new UI.Rect({
-  position: new Vector2(58, size4),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell18 = new UI.Rect({
-  position: new Vector2(87, size4),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell19 = new UI.Rect({
-  position: new Vector2(116, size4),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-
-// Fourth Row
-var cell20 = new UI.Rect({
-  position: new Vector2(0, size5),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell21 = new UI.Rect({
-  position: new Vector2(29, size5),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell22 = new UI.Rect({
-  position: new Vector2(58, size5),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell23 = new UI.Rect({
-  position: new Vector2(87, size5),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-var cell24 = new UI.Rect({
-  position: new Vector2(116, size5),
-  // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
-});
-
-var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, cell10, cell11, cell12, cell13, cell14, cell15, cell16, cell17, cell18, cell19, cell20, cell21, cell22, cell23, cell24];
-
-for (var i = 0; i < grid.length; i++) {
-  wind.add(grid[i]);
-}
-
-// The main page
-var main = new UI.Card({
-  body: wind.show()
-});
-main.show();
 
 main.on('click', 'down', function(e) {
   var card = new UI.Card();
@@ -223,7 +240,7 @@ main.on('click', 'down', function(e) {
   card.show();
 });
 
-main.on('click', 'select', function(e) {
+main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
     sections: [{
       // Items are instant use upon purchase
