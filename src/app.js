@@ -212,7 +212,7 @@ for (var i = 0; i < grid.length; i++) {
   wind.add(grid[i]);
 }
 wind.show();
-
+SM.Log('/mainwind/show');
 
 wind.on('click', 'up', function(e) {
   var menu = new UI.Menu({
@@ -238,11 +238,15 @@ wind.on('click', 'up', function(e) {
         totalHealth = ++totalHealth;
         totalCoins = totalCoins - 2;
         console.log("Health was purchased");
+        SM.Log('/hp/purchase');
+
         console.log(totalHealth);
         console.log(totalCoins);
       }
       else {
         console.log("Not enough coins");
+        SM.Log('/coins/none');
+
       }
     }
     
@@ -251,6 +255,8 @@ wind.on('click', 'up', function(e) {
       
       totalCoins = totalCoins - 3;
       console.log("Wall was purchased");
+      SM.Log('/wall/purchase');
+
       console.log(totalCoins);
     }
     
@@ -259,6 +265,8 @@ wind.on('click', 'up', function(e) {
       
       totalCoins = totalCoins - 3;
       console.log("Nuke was purchased");
+      SM.Log('/nuke/purchase');
+
     }
   });
   menu.show();
@@ -273,4 +281,6 @@ wind.on('click', 'down', function(e) {
   body: 'Coins: '+totalCoins
   });
   healthAndCoinCard.show();
+  SM.Log('/status/show');
+
 });
