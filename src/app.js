@@ -17,6 +17,7 @@ var main = new UI.Card({
   body: 'Press any button.'
 });
 
+
 main.show();
 
 /*main.on('click', 'up', function(e) {
@@ -38,8 +39,9 @@ main.show();
   });
   menu.show();
 });
+*/
 
-main.on('click', 'select', function(e) {
+main.on('click', 'up', function(e) {
   var wind = new UI.Window();
   var textfield = new UI.Text({
     position: new Vector2(0, 50),
@@ -52,6 +54,7 @@ main.on('click', 'select', function(e) {
   wind.show();
 });
 
+/*
 main.on('click', 'down', function(e) {
   var card = new UI.Card();
   card.title('A Card');
@@ -82,7 +85,8 @@ main.on('click', 'select', function(e) {
     if (e.sectionIndex === 0 && e.itemIndex === 0) {
       if (totalHealth < 20 && totalCoins >= 2) {
         totalHealth = ++totalHealth;
-        totalCoins = --totalCoins;
+        totalCoins = totalCoins - 2;
+        console.log("Health was purchased");
         console.log(totalHealth);
         console.log(totalCoins);
       }
@@ -93,11 +97,16 @@ main.on('click', 'select', function(e) {
     
     // If Wall was purchased
     if (e.sectionIndex === 0 && e.itemIndex === 1) {
+      
+      totalCoins = totalCoins - 3;
       console.log("Wall was purchased");
+      console.log(totalCoins);
     }
     
     // If Nuke was purchased
     if (e.sectionIndex === 0 && e.itemIndex === 2) {
+      
+      totalCoins = totalCoins - 3;
       console.log("Nuke was purchased");
     }
   });
