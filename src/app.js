@@ -63,6 +63,7 @@ main.on('click', 'down', function(e) {
 main.on('click', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
+      // Items are instant use upon purchase
       items: [{
         title: 'Buy Health (2)',
         subtitle: 'Heals for 1 hp'
@@ -70,13 +71,14 @@ main.on('click', 'select', function(e) {
         title: 'Buy Wall (3)',
         subtitle: 'Takes the next hit'
       }, {
-        title: 'Buy Logic Bomb (4)',
+        title: 'Buy Nuke (4)',
         subtitle: 'Clears every tile'
       }]
     }]
   });
   menu.on('select', function(e) {
     console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    
     console.log('The item is titled "' + e.item.title + '"');
   });
   menu.show();
