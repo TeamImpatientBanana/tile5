@@ -268,4 +268,5 @@ wind.on('click', 'down', function(e) {
   
   statusWind.add(healthCard);
   statusWind.add(coinCard);
+  statusWind.show();
 });
