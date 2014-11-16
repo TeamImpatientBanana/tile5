@@ -48,42 +48,18 @@ main.on('click', 'up', function(e) {
   // Create a dynamic window
   var wind = new UI.Window();
   
-  var grid.cell[0] = new UI.Rect({
-    position: new Vector2(0, 24),
-    // static value
-    size: new Vector2(28, 28),
-    borderColor: 'black'
-  });
-  var grid.cell[1] = new UI.Rect({
-    position: new Vector2(29, 24),
-    // static value
-    size: new Vector2(28, 28),
-    borderColor: 'black'
-  });
-  var grid.cell[2] = new UI.Rect({
-    position: new Vector2(58, 24),
-    // static value
-    size: new Vector2(28, 28),
-    borderColor: 'black'
-  });
-  var grid.cell[3] = new UI.Rect({
-    position: new Vector2(86, 24),
-    // static value
-    size: new Vector2(28, 28),
-    borderColor: 'black'
-  });
-  var grid.cell[4] = new UI.Rect({
-    position: new Vector2(115, 24),
-    // static value
-    size: new Vector2(28, 28),
-    borderColor: 'black'
-  });
-
-  for (var i = 0; i < 25; i++) {
-    wind.add(grid.cell[i]);
-  }
-  
+  var grid = [
+    var cell0 = new UI.Rect({
+      position: new Vector2(0, 24),
+      // static value
+      size: new Vector2(28, 28),
+      borderColor: 'black'
+    })
+  ];
+    
+  wind.add(grid[0]);
   wind.show();
+
   /*
   var wind = new UI.Window();
   var textfield = new UI.Text({
@@ -96,7 +72,6 @@ main.on('click', 'up', function(e) {
   wind.add(textfield);
   wind.show();
   */
-});
 
 /*
 main.on('click', 'down', function(e) {
@@ -104,8 +79,8 @@ main.on('click', 'down', function(e) {
   card.title('A Card');
   card.subtitle('Is a Window');
   card.body('The simplest window type in Pebble.js.');
-  card.show();
-});*/
+  card.show();*/
+});
 
 main.on('click', 'select', function(e) {
   var menu = new UI.Menu({
