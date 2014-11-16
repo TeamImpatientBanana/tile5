@@ -230,14 +230,16 @@ main.on('click', 'up', function(e) {
   wind.add(textfield);
   wind.show();
   */
+});
 
-/*
 main.on('click', 'down', function(e) {
   var card = new UI.Card();
-  card.title('A Card');
-  card.subtitle('Is a Window');
-  card.body('The simplest window type in Pebble.js.');
-  card.show();*/
+  card.title('Status');
+  card.subtitle('Health');
+  card.body(totalHealth+'/20');
+  card.subtitle('Coins');
+  card.body(totalCoins);
+  card.show();
 });
 
 main.on('click', 'select', function(e) {
