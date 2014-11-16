@@ -40,11 +40,11 @@ main.show();
 });
 */
 
-var size1 = 20;
-var size2 = 49;
-var size3 = 78;
-var size4 = 107;
-var size5 = 136;
+var size1 = 12;
+var size2 = 41;
+var size3 = 70;
+var size4 = 99;
+var size5 = 128;
 
 main.on('click', 'up', function(e) {
   
