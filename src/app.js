@@ -8,7 +8,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var totalCoins = 10;
-var totalHealth = 20;
+var totalHealth = 17;
 
 var main = new UI.Card({
   title: 'tile5',
@@ -80,11 +80,15 @@ main.on('click', 'select', function(e) {
   menu.on('select', function(e) {
     // If Health was purchased
     if (e.sectionIndex === 0 && e.itemIndex === 0) {
-      if (totalHealth == 20 || totalCoins < 2) {
-        totalHealth = totalHealth + 1;
+      if (totalHealth < 20 && totalCoins >= 2) {
+        totalHealth = ++totalHealth;
         console.log(totalHealth);
       }
+      else {
+        console.log("Not enough coins");
+      }
     }
+    
     // If Wall was purchased
     if (e.sectionIndex === 0 && e.itemIndex === 1) {
       console.log("Wall was purchased");
