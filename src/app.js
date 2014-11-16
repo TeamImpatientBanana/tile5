@@ -78,6 +78,14 @@ main.on('click', 'select', function(e) {
   });
   menu.on('select', function(e) {
     console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    // If Health was purchased
+    if (e.sectionIndex === 0 && e.itemIndex === 0) {
+      totalHealth = totalHealth + 1;
+      console.log(totalHealth);
+    }
+    // If Wall was purchased
+    
+    // If Nuke was purchased
     
     console.log('The item is titled "' + e.item.title + '"');
   });
