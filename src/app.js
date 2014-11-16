@@ -6,9 +6,8 @@
 
 var UI = require('ui');
 var Vector2 = require('vector2');
-// Include the file that contains the rectangle calculations
-require('grid.js');
 
+// Call initial variables
 var totalCoins = 10;
 var totalHealth = 17;
 
@@ -18,8 +17,6 @@ var main = new UI.Card({
   subtitle: 'True time tower defense',
   body: 'Press any button.'
 });
-
-
 main.show();
 
 /*main.on('click', 'up', function(e) {
