@@ -48,31 +48,31 @@ main.on('click', 'up', function(e) {
   var cell0 = new UI.Rect({
     position: new Vector2(0, 24),
     // static value
-    size: new Vector2(28, 28),
+    size: new Vector2(29, 29),
     borderColor: 'black'
   });
   var cell1 = new UI.Rect({
     position: new Vector2(29, 24),
     // static value
-    size: new Vector2(28, 28),
+    size: new Vector2(29, 29),
     borderColor: 'black'
   });
   var cell2 = new UI.Rect({
     position: new Vector2(58, 24),
     // static value
-    size: new Vector2(28, 28),
+    size: new Vector2(29, 29),
     borderColor: 'black'
   });
   var cell3 = new UI.Rect({
-    position: new Vector2(86, 24),
+    position: new Vector2(87, 24),
     // static value
-    size: new Vector2(28, 28),
+    size: new Vector2(29, 29),
     borderColor: 'black'
   });
   var cell4 = new UI.Rect({
-    position: new Vector2(115, 24),
+    position: new Vector2(116, 24),
     // static value
-    size: new Vector2(28, 28),
+    size: new Vector2(29, 29),
     borderColor: 'black'
   });
   
