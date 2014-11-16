@@ -46,11 +46,43 @@ main.show();
 main.on('click', 'up', function(e) {
   
   // Create a dynamic window
-  var wind = new UI.Window();    
+  var wind = new UI.Window();
+  
+  var grid.cell[0] = new UI.Rect({
+    position: new Vector2(0, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var grid.cell[1] = new UI.Rect({
+    position: new Vector2(29, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var grid.cell[2] = new UI.Rect({
+    position: new Vector2(58, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var grid.cell[3] = new UI.Rect({
+    position: new Vector2(86, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
+  var grid.cell[4] = new UI.Rect({
+    position: new Vector2(115, 24),
+    // static value
+    size: new Vector2(28, 28),
+    borderColor: 'black'
+  });
 
-  wind.add(rect);
-    
-
+  for (var i = 0; i < 25; i++) {
+    wind.add(grid.cell[i]);
+  }
+  
   wind.show();
   /*
   var wind = new UI.Window();
