@@ -45,6 +45,7 @@ main.on('click', 'up', function(e) {
   // Create a dynamic window
   var wind = new UI.Window();
   
+  // First Row
   var cell0 = new UI.Rect({
     position: new Vector2(0, 24),
     // static value
@@ -76,7 +77,39 @@ main.on('click', 'up', function(e) {
     borderColor: 'black'
   });
   
-  var grid = [cell0, cell1, cell2, cell3, cell4];
+  //Second Row
+  var cell5 = new UI.Rect({
+    position: new Vector2(0, 53),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell6 = new UI.Rect({
+    position: new Vector2(29, 53),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell7 = new UI.Rect({
+    position: new Vector2(58, 53),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell8 = new UI.Rect({
+    position: new Vector2(87, 53),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell9 = new UI.Rect({
+    position: new Vector2(116, 53),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9];
     
   for (var i = 0; i < grid.length; i++) {
     wind.add(grid[i]);
