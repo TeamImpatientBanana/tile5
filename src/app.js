@@ -141,7 +141,39 @@ main.on('click', 'up', function(e) {
     borderColor: 'black'
   });
   
-  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, cell10, cell11, cell12, cell13, cell14];
+  // Fourth Row
+  var cell15 = new UI.Rect({
+    position: new Vector2(0, 111),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell16 = new UI.Rect({
+    position: new Vector2(29, 111),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell17 = new UI.Rect({
+    position: new Vector2(58, 111),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell18 = new UI.Rect({
+    position: new Vector2(87, 111),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell19 = new UI.Rect({
+    position: new Vector2(116, 111),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, cell10, cell11, cell12, cell13, cell14, cell15, cell16, cell17, cell18, cell19];
     
   for (var i = 0; i < grid.length; i++) {
     wind.add(grid[i]);
