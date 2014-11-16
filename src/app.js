@@ -7,6 +7,19 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
+var SM = require('strap-metrics');
+var strapMetricsParms = {
+    app_id: "7r7wg8WkDwyiCJDYg",
+    resolution: "144x168",
+    useragent: "PEBBLE/2.0"
+};
+
+SM.Init(strapMetricsParms);
+
+// if accel functionality desired
+var Accel = require('accel');
+SM.InitAccel(strapMetricsParms,Accel);
+
 // Call initial variables
 var totalCoins = 10;
 var totalHealth = 17;
