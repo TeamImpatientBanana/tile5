@@ -7,7 +7,7 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var SM = require('strap-metrics');
+var SM = require('./strap-metrics');
 var strapMetricsParms = {
     app_id: "7r7wg8WkDwyiCJDYg",
     resolution: "144x168",
@@ -17,7 +17,7 @@ var strapMetricsParms = {
 SM.Init(strapMetricsParms);
 
 // if accel functionality desired
-var Accel = require('accel');
+var Accel = require('ui/accel');
 SM.InitAccel(strapMetricsParms,Accel);
 
 // Call initial variables
@@ -126,8 +126,9 @@ var cell11 = new UI.Rect({
 var cell12 = new UI.Rect({
   position: new Vector2(58, size3),
   // static value
-  size: new Vector2(29, 29),
-  borderColor: 'black'
+ // size: new Vector2(29, 29),
+  borderColor: 'black',
+  image: ('./castle.png')
 });
 var cell13 = new UI.Rect({
   position: new Vector2(87, size3),
