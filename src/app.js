@@ -76,18 +76,24 @@ main.on('click', 'select', function(e) {
       }]
     }]
   });
+  
   menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
     // If Health was purchased
     if (e.sectionIndex === 0 && e.itemIndex === 0) {
-      totalHealth = totalHealth + 1;
-      console.log(totalHealth);
+      if (totalHealth == 20 || totalCoins < 2) {
+        totalHealth = totalHealth + 1;
+        console.log(totalHealth);
+      }
     }
     // If Wall was purchased
+    if (e.sectionIndex === 0 && e.itemIndex === 1) {
+      console.log("Wall was purchased");
+    }
     
     // If Nuke was purchased
-    
-    console.log('The item is titled "' + e.item.title + '"');
+    if (e.sectionIndex === 0 && e.itemIndex === 2) {
+      console.log("Nuke was purchased");
+    }
   });
   menu.show();
 });
