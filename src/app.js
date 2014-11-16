@@ -7,7 +7,7 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var totalCoins = 0;
+var totalCoins = 10;
 var totalHealth = 20;
 
 var main = new UI.Card({
