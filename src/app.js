@@ -16,7 +16,7 @@ var main = new UI.Card({
 
 main.show();
 
-main.on('click', 'up', function(e) {
+/*main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
@@ -55,4 +55,24 @@ main.on('click', 'down', function(e) {
   card.subtitle('Is a Window');
   card.body('The simplest window type in Pebble.js.');
   card.show();
+});*/
+
+main.on('click', 'select', function(e) {
+  var menu = new UI.Menu({
+    sections: [{
+      items: [{
+        title: 'Pebble.js',
+        icon: 'images/menu_icon.png',
+        subtitle: 'Can do Menus'
+      }, {
+        title: 'Second Item',
+        subtitle: 'Subtitle Text'
+      }]
+    }]
+  });
+  menu.on('select', function(e) {
+    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    console.log('The item is titled "' + e.item.title + '"');
+  });
+  menu.show();
 });
