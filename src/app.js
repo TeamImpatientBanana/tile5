@@ -45,14 +45,14 @@ main.on('click', 'up', function(e) {
   // Create a dynamic window
   var wind = new UI.Window();
   
-  var grid = [
-    var cell0 = new UI.Rect({
+  var cell0 = new UI.Rect({
       position: new Vector2(0, 24),
       // static value
       size: new Vector2(28, 28),
       borderColor: 'black'
-    })
-  ];
+    });
+  
+  var grid = [cell0];
     
   wind.add(grid[0]);
   wind.show();
