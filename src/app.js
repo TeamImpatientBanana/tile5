@@ -6,6 +6,8 @@
 
 var UI = require('ui');
 var Vector2 = require('vector2');
+// Include the file that contains the rectangle calculations
+require('grid.js');
 
 var totalCoins = 10;
 var totalHealth = 17;
@@ -44,16 +46,10 @@ main.show();
 main.on('click', 'up', function(e) {
   
   // Create a dynamic window
-  var wind = new UI.Window();
-  
-  // Add a rect element
-  var rect = new UI.Rect({
-    position: new Vector2(50, 50),
-    size: new Vector2(20, 20),
-    borderColor: 'black'
-  });
-  
+  var wind = new UI.Window();    
+
   wind.add(rect);
+    
 
   wind.show();
   /*
