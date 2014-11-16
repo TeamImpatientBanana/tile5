@@ -77,7 +77,7 @@ main.on('click', 'up', function(e) {
     borderColor: 'black'
   });
   
-  //Second Row
+  // Second Row
   var cell5 = new UI.Rect({
     position: new Vector2(0, 53),
     // static value
@@ -109,7 +109,39 @@ main.on('click', 'up', function(e) {
     borderColor: 'black'
   });
   
-  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9];
+  // Third Row
+  var cell10 = new UI.Rect({
+    position: new Vector2(0, 82),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell11 = new UI.Rect({
+    position: new Vector2(29, 82),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell12 = new UI.Rect({
+    position: new Vector2(58, 82),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell13 = new UI.Rect({
+    position: new Vector2(87, 82),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  var cell14 = new UI.Rect({
+    position: new Vector2(116, 82),
+    // static value
+    size: new Vector2(29, 29),
+    borderColor: 'black'
+  });
+  
+  var grid = [cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, cell10, cell11, cell12, cell13, cell14];
     
   for (var i = 0; i < grid.length; i++) {
     wind.add(grid[i]);
