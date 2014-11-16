@@ -254,19 +254,10 @@ wind.on('click', 'up', function(e) {
 
 
 wind.on('click', 'down', function(e) {
-  var statusWind = new UI.Window();
-  
-  var healthCard = new UI.Card({
-    subtitle: 'Health:',
-    body: totalHealth.toString()+'/20'
+  var healthAndCoinCard = new UI.Card({
+  title: 'Status',
+  subtitle: 'Health: '+totalHealth.toString()+'/20',
+  body: 'Coins: '+totalCoins
   });
-  
-  var coinCard = new UI.Card({
-    subtitle: 'Coins:',
-    body: totalCoins.toString()
-  });
-  
-  statusWind.add(healthCard);
-  statusWind.add(coinCard);
-  statusWind.show();
+  healthAndCoinCard.show();
 });
