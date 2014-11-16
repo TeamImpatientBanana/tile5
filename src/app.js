@@ -82,7 +82,9 @@ main.on('click', 'select', function(e) {
     if (e.sectionIndex === 0 && e.itemIndex === 0) {
       if (totalHealth < 20 && totalCoins >= 2) {
         totalHealth = ++totalHealth;
+        totalCoins = --totalCoins;
         console.log(totalHealth);
+        console.log(totalCoins);
       }
       else {
         console.log("Not enough coins");
