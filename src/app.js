@@ -42,6 +42,21 @@ main.show();
 */
 
 main.on('click', 'up', function(e) {
+  
+  // Create a dynamic window
+  var wind = new UI.Window();
+  
+  // Add a rect element
+  var rect = new UI.Rect({
+    position: new Vector2(50, 50),
+    size: new Vector2(20, 20),
+    borderColor: 'black'
+  });
+  
+  wind.add(rect);
+
+  wind.show();
+  /*
   var wind = new UI.Window();
   var textfield = new UI.Text({
     position: new Vector2(0, 20),
@@ -52,6 +67,7 @@ main.on('click', 'up', function(e) {
   });
   wind.add(textfield);
   wind.show();
+  */
 });
 
 /*
