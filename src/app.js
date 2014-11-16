@@ -7,6 +7,9 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
+var totalCoins = 0;
+var totalHealth = 20;
+
 var main = new UI.Card({
   title: 'tile5',
   icon: 'images/menu_icon.png',
@@ -61,12 +64,14 @@ main.on('click', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
-        subtitle: 'Can do Menus'
+        title: 'Buy Health (2)',
+        subtitle: 'Heals for 1 hp'
       }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+        title: 'Buy Wall (3)',
+        subtitle: 'Takes the next hit'
+      }, {
+        title: 'Buy Logic Bomb (4)',
+        subtitle: 'Clears every tile'
       }]
     }]
   });
