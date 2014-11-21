@@ -159,7 +159,6 @@ function moveAllEnemies() {
   if (enemyStatus[3][13] > 0) {
     for (var ad = 0; ad < enemyStatus[3][13]; ad++) {
       enemyStatus[3][13]--;
-      enemyStatus[3].splice(13);
     }
   }
 
