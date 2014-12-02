@@ -99,6 +99,29 @@ main.on('click', 'select', function(e) {
   menu.show();
 });
 
+//Begin tiles as objects that probably won't work
+//Make enemies as params of tiles
+/* EX:
+  if (tile1.enemies[origin] > 0) {
+    for (var i = 0; i < tile1.enemies[origin]; i++) {
+      tile1.enemies[origin]--;
+      tile2.enemies[origin]++;
+    }
+  }
+*/
+
+function tile(position) {
+    this.position = position;
+    this.isSpawnPosition = isSpawnPosition;
+    this.isCastle = isCastle;
+    this.rowPosition = row;
+    this.column = column;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
+
+//End tiles as objects that probably won't work
 
 
 main.on('click', 'down', function(e) {

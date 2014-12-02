@@ -26,7 +26,7 @@ var totalHealth = 17;
 
 var enemyStatus = []; //global var
 
-function moveAllEnemies() {
+function moveAllEnemies() { //enemystatus[startingPosition][currentPosition]
   //cases for corners
   if (enemyStatus[0][0] > 0) {
     for (var i = 0; i < enemyStatus[0][0]; i++) {
